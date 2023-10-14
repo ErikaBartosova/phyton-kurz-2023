@@ -23,5 +23,6 @@ if kod_soucastky in sklad:
         print(f"Po objednávce na skladě zůstane {sklad[kod_soucastky]}.")
     else:
         print("❗ Lze prodat jen omezené množství kusů.")
+        sklad.pop(kod_soucastky)
 else:
     print(f"❌ Bohužel, součástka {kod_soucastky} není skladem.")
