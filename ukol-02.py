@@ -18,9 +18,13 @@ mnozstvi = int(mnozstvi)
 
 if kod_soucastky in sklad:
     if sklad[kod_soucastky] >= mnozstvi:
-        print(f"✅ Poptávku lze uspokojit v plné výši. Na skladě je aktuálně{sklad[kod_soucastky]} kusů.")
+        print(f"✅ Poptávku lze uspokojit v plné výši. Na skladě je aktuálně {sklad[kod_soucastky]} kusů.")
         sklad[kod_soucastky] -= mnozstvi
-        print(f"Po objednávce na skladě zůstane {sklad[kod_soucastky]}.")
+        if sklad[kod_soucastky] == 0:
+            print("Po této objednávce již nebude zboží skladem.")
+            sklad.pop(kod_soucastky)
+        else:
+            print(f"Po objednávce na skladě zůstane {sklad[kod_soucastky]}.")
     else:
         print("❗ Lze prodat jen omezené množství kusů.")
         sklad.pop(kod_soucastky)
