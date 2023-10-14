@@ -18,5 +18,5 @@ for student, score in data.items():
 
 #Výsledný slovník ulož jako JSON do souboru prospech.json.
 
-with open('prospech.json', 'w', encoding='utf-8') as output_file:
+with open("prospech.json", "w", encoding="utf-8") as output_file:
     json.dump(prospech_dict, output_file, ensure_ascii = False, indent = 4)
