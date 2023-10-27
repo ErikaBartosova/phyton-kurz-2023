@@ -1,6 +1,5 @@
 # Mějme zadaný následující seznam naměřených teplot.
 # Seznam obsahuje teploty naměřené pro každý den v týdnu ve čtyřech časech - ráno [0], v poledne [1], večer [2] a v noci [3].
-#proměnná = [ x for x in range () if x == y]
 
 teploty = [
     [2.1, 5.2, 6.1, -0.1],
