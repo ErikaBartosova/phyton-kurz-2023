@@ -26,38 +26,20 @@ volba_uzivatele = input("Přejete si zapůjčit automobil značky Škoda nebo Pe
 volba_uzivatele = volba_uzivatele.lower()
 
 if volba_uzivatele == "peugeot":
-    if auto_V1.dostupnost:
-        print(auto_V1.get_info())
-        print(auto_V1.pujc_auto())
-    else:
-        print("Vozidlo není k dispozici.")
+    print(auto_V1.get_info())
+    print(auto_V1.pujc_auto())
+elif volba_uzivatele == "škoda":
+    print(auto_V2.get_info())
+    print(auto_V2.pujc_auto())
 else:
-    if volba_uzivatele == "škoda":
-        if auto_V2.dostupnost:
-            print(auto_V2.get_info())
-            print(auto_V2.pujc_auto())
-        else:
-            print("Vozidlo není k dispozici.")
-    else:
-        print("Chybně zadaná značka automobilu")
-
+    print("Chybně zadaná značka automobilu")
+    
 # Otestuj, že program nedovolí půjčit stejné auto dvakrát.
-""" volba_uzivatele = input("Přejete si zapůjčit automobil značky Škoda nebo Peugeot?: ")
-volba_uzivatele = volba_uzivatele.lower()
+novy_pokyn = input("Přejete si zapůjčit automobil znovu? (ano/ne): ").lower()
 
-if volba_uzivatele == "peugeot":
-    if auto_V1.dostupnost:
-        print(auto_V1.get_info())
-        print(auto_V1.pujc_auto())
-    else:
-        print("Vozidlo není k dispozici.")
+if novy_pokyn == "ano":
+
+    print(auto_V1.get_info())
+    print(auto_V1.pujc_auto())
 else:
-    if volba_uzivatele == "škoda":
-        if auto_V2.dostupnost:
-            print(auto_V2.get_info())
-            print(auto_V2.pujc_auto())
-        else:
-            print("Vozidlo není k dispozici.")
-    else:
-        print("Chybně zadaná značka automobilu")
- """
+    print("Děkujeme za využití našich služeb.")
